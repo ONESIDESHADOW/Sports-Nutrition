@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 const variants = {
   h1: "text-5xl md:text-6xl font-bold font-heading",
   h2: "text-4xl md:text-5xl font-bold font-heading",
