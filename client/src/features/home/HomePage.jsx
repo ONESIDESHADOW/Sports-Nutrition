@@ -7,6 +7,7 @@ import OfferSection from "../offers/OfferSection";
 import BestSellerSection from "../bestSeller/BestSellerSection";
 import TestimonialSection from "../testimonials/TestimonialSection";
 import InstagramSection from "../instagram/InstagramSection";
+import NewsletterSection from "../newsletter/NewsletterSection";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
       <BestSellerSection />
       <TestimonialSection />
       <InstagramSection />
+      <NewsletterSection />
     </>
   );
 };
