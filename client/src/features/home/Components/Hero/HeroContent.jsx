@@ -7,7 +7,7 @@ const HeroContent = () => {
     <motion.div
       initial={{ opacity: 0, x: -80 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: .8 }}
+      transition={{ duration: 0.8 }}
     >
       <span className="rounded-full bg-lime-400 px-5 py-2 font-semibold text-black">
         #1 Sports Nutrition
@@ -22,14 +22,13 @@ const HeroContent = () => {
       </h1>
 
       <p className="mt-6 max-w-xl text-lg text-zinc-400">
-        Premium proteins, pre-workouts, amino acids and
-        mass gainers to help you achieve your fitness goals.
+        Premium proteins, pre-workouts, amino acids and mass gainers to help you
+        achieve your fitness goals.
       </p>
 
       <HeroButtons />
 
       <HeroStats />
-
     </motion.div>
   );
 };

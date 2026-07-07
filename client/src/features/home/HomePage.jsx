@@ -5,6 +5,8 @@ import CategorySection from "../categories/CategorySection";
 import WhyChooseUsSection from "../whyChooseUs/WhyChooseUsSection";
 import OfferSection from "../offers/OfferSection";
 import BestSellerSection from "../bestSeller/BestSellerSection";
+import TestimonialSection from "../testimonials/TestimonialSection";
+import InstagramSection from "../instagram/InstagramSection";
 
 const HomePage = () => {
   return (
@@ -16,6 +18,8 @@ const HomePage = () => {
       <WhyChooseUsSection />
       <OfferSection />
       <BestSellerSection />
+      <TestimonialSection />
+      <InstagramSection />
     </>
   );
 };
