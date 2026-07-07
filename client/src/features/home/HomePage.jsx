@@ -1,9 +1,13 @@
+import Hero from "./components/Hero";
+import GoalSection from "./components/GoalSection";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen">
-      Hero Banner Here...
-    </div>
+    <>
+      <Hero />
+
+      <GoalSection />
+    </>
   );
 };
 
