@@ -1,0 +1,38 @@
+export const products = [
+  {
+    id: 1,
+    name: "Robinson USA Whey-80",
+    category: "Protein",
+    price: 5000,
+    rating: 5,
+    badge: "Best Seller",
+    image: "https://placehold.co/600x600?text=Whey-80",
+  },
+  {
+    id: 2,
+    name: "Zero Whey 5lb",
+    category: "Protein",
+    price: 6000,
+    rating: 5,
+    badge: "Premium",
+    image: "https://placehold.co/600x600?text=Zero+Whey",
+  },
+  {
+    id: 3,
+    name: "Rage Pre Workout",
+    category: "Pre Workout",
+    price: 1800,
+    rating: 4,
+    badge: "Popular",
+    image: "https://placehold.co/600x600?text=Rage",
+  },
+  {
+    id: 4,
+    name: "Ultra Mass Gainer",
+    category: "Mass Gainer",
+    price: 1700,
+    rating: 5,
+    badge: "Trending",
+    image: "https://placehold.co/600x600?text=Mass+Gainer",
+  },
+];
