@@ -4,6 +4,7 @@ import ProductSection from "../products/ProductSection";
 import CategorySection from "../categories/CategorySection";
 import WhyChooseUsSection from "../whyChooseUs/WhyChooseUsSection";
 import OfferSection from "../offers/OfferSection";
+import BestSellerSection from "../bestSeller/BestSellerSection";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <CategorySection />
       <WhyChooseUsSection />
       <OfferSection />
+      <BestSellerSection />
     </>
   );
 };
