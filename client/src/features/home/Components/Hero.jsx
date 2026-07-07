@@ -1,5 +1,6 @@
-import HeroContent from "../HeroContent";
-import HeroImage from "../HeroImage";
+import HeroContent from "./HeroContent";
+import HeroImage from "./HeroImage";
+
 
 const Hero = () => {
   return (
