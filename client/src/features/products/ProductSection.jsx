@@ -1,6 +1,7 @@
 import Container from "../../components/ui/Container";
 import SectionTitle from "../../components/ui/SectionTitle";
 import ProductGrid from "./components/ProductGrid";
+
 import { products } from "./data/products";
 
 const ProductSection = () => {
