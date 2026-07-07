@@ -1,5 +1,5 @@
-import Hero from "./components/Hero";
-import GoalSection from "./components/GoalSection";
+import Hero from "./Components/Hero/Hero";
+import GoalSection from "./components/GoalSection/GoalSection";
 import ProductSection from "../products/ProductSection";
 import CategorySection from "../categories/CategorySection";
 import WhyChooseUsSection from "../whyChooseUs/WhyChooseUsSection";
