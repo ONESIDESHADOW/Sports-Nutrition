@@ -13,6 +13,7 @@ import bannerRoutes from "./routes/banner.routes.js"
 import offerRoutes from "./routes/offer.routes.js";
 import testimonialRoutes from "./routes/testimonial.routes.js";
 import inquiryRoutes from "./routes/inquiry.routes.js";
+import newsletterRoutes from "./routes/newsletter.routes.js";
 
 const app = express();
 
@@ -60,6 +61,9 @@ app.use("/api/v1/banners", bannerRoutes);
 app.use("/api/v1/offers", offerRoutes);
 app.use("/api/v1/testimonials", testimonialRoutes);
 app.use("/api/v1/inquiries", inquiryRoutes);
+app.use("/api/v1/newsletter", newsletterRoutes);
+
+
 
 app.use((req, res) => {
   res.status(404).json({
