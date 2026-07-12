@@ -16,7 +16,7 @@ const StatCard = ({
       transition={{ duration: 0.25 }}
       className="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-200"
     >
-      <div className={`h-2 bg-gradient-to-r ${color}`} />
+      <div className={`h-2 bg-linear-to-r ${color}`} />
 
       <div className="p-6">
 
@@ -39,7 +39,7 @@ const StatCard = ({
           </div>
 
           <div
-            className={`h-16 w-16 rounded-2xl flex items-center justify-center bg-gradient-to-r ${color}`}
+            className={`h-16 w-16 rounded-2xl flex items-center justify-center bg-linear-to-r ${color}`}
           >
             <Icon
               className="text-white"
