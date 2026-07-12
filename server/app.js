@@ -12,6 +12,7 @@ import productRoutes from "./routes/product.routes.js";
 import bannerRoutes from "./routes/banner.routes.js"
 import offerRoutes from "./routes/offer.routes.js";
 import testimonialRoutes from "./routes/testimonial.routes.js";
+import inquiryRoutes from "./routes/inquiry.routes.js";
 
 const app = express();
 
@@ -58,6 +59,7 @@ app.use("/api/v1/products", productRoutes);
 app.use("/api/v1/banners", bannerRoutes);
 app.use("/api/v1/offers", offerRoutes);
 app.use("/api/v1/testimonials", testimonialRoutes);
+app.use("/api/v1/inquiries", inquiryRoutes);
 
 app.use((req, res) => {
   res.status(404).json({
