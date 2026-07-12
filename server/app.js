@@ -9,6 +9,7 @@ import authRoutes from "./routes/auth.routes.js";
 import categoryRoutes from "./routes/category.routes.js";
 import uploadRoutes from "./routes/upload.routes.js";
 import productRoutes from "./routes/product.routes.js";
+import bannerRoutes from "./routes/banner.routes.js"
 
 const app = express();
 
@@ -52,6 +53,7 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/categories", categoryRoutes);
 app.use("/api/v1/upload", uploadRoutes);
 app.use("/api/v1/products", productRoutes);
+app.use("/api/v1/banners", bannerRoutes);
 
 app.use((req, res) => {
   res.status(404).json({
