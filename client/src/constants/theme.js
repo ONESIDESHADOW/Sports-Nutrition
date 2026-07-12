@@ -30,3 +30,14 @@ export const RADIUS = {
   lg: "20px",
   xl: "28px",
 };
+
+export const theme = {
+  background: "#0F172A",
+  sidebar: "#111827",
+  card: "#1E293B",
+  primary: "#22C55E",
+  secondary: "#10B981",
+  text: "#FFFFFF",
+  border: "#334155",
+};
+
