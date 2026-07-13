@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import ProductToolbar from "../../components/products/ProductToolbar";
 import ProductTable from "../../components/products/ProductTable";
 import useProducts from "../../../hooks/useProducts";
+import useCategories from "../../../hooks/useCategories";
 
 const ProductList = () => {
   const navigate = useNavigate();
@@ -18,6 +19,14 @@ const ProductList = () => {
     isError,
     refetch,
   } = useProducts();
+
+  const { data: categoryData } =
+  useCategories();
+
+const categories =
+  categoryData?.categories ||
+  categoryData ||
+  [];
 
   const products = data?.products || data || [];
 
@@ -88,7 +97,7 @@ const ProductList = () => {
         setCategory={setCategory}
         status={status}
         setStatus={setStatus}
-        categories={[]}
+        categories={categories}
         onRefresh={refetch}
         onAdd={() =>
           navigate("/products/add")
