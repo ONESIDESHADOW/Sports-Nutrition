@@ -59,7 +59,8 @@ router.put(
 
 router.delete(
   "/:id",
-  protect,
+  verifyToken,
+  isAdmin,
   deleteProduct
 );
 

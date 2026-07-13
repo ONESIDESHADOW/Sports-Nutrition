@@ -14,6 +14,7 @@ import offerRoutes from "./routes/offer.routes.js";
 import testimonialRoutes from "./routes/testimonial.routes.js";
 import inquiryRoutes from "./routes/inquiry.routes.js";
 import newsletterRoutes from "./routes/newsletter.routes.js";
+import dashboardRoutes from "./routes/dashboard.routes.js";
 
 const app = express();
 
@@ -62,6 +63,8 @@ app.use("/api/v1/offers", offerRoutes);
 app.use("/api/v1/testimonials", testimonialRoutes);
 app.use("/api/v1/inquiries", inquiryRoutes);
 app.use("/api/v1/newsletter", newsletterRoutes);
+app.use("/api/v1/dashboard", dashboardRoutes);
+
 
 
 
