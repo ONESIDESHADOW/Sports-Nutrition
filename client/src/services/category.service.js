@@ -6,11 +6,11 @@ export const getCategories = () =>
 export const getCategory = (id) =>
   api.get(`/categories/${id}`);
 
-export const createCategory = (data) =>
-  api.post("/categories", data);
+export const createCategory = (formData) =>
+  api.post("/categories", formData);
 
-export const updateCategory = (id, data) =>
-  api.put(`/categories/${id}`, data);
+export const updateCategory = (id, formData) =>
+  api.put(`/categories/${id}`, formData);
 
 export const deleteCategory = (id) =>
   api.delete(`/categories/${id}`);

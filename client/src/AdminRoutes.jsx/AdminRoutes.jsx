@@ -21,6 +21,7 @@ import InquiryList from "../admin/pages/inquiry/InquiryList";
 
 import NewsletterList from "../admin/pages/newsletter/NewsletterList";
 
+import AddCategory from "../pages/categories/AddCategory";
 
 const AdminRoutes = () => {
   return (
@@ -42,6 +43,8 @@ const AdminRoutes = () => {
 
         <Route path="categories" element={<CategoryList />} />
 
+        <Route path="categories/add" element={<AddCategory />} />
+
         <Route path="banners" element={<BannerList />} />
 
         <Route path="offers" element={<OfferList />} />
@@ -51,8 +54,6 @@ const AdminRoutes = () => {
         <Route path="inquiries" element={<InquiryList />} />
 
         <Route path="newsletter" element={<NewsletterList />} />
-
-        
       </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />
