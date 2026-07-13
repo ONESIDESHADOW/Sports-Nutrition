@@ -1,16 +1,16 @@
-import axios from "./api";
+import api from "./api";
 
 export const getProducts = () =>
-  axios.get("/products");
+  api.get("/products");
 
 export const getProduct = (id) =>
-  axios.get(`/products/${id}`);
+  api.get(`/products/${id}`);
 
 export const createProduct = (data) =>
-  axios.post("/products", data);
+  api.post("/products", data);
 
 export const updateProduct = (id, data) =>
-  axios.put(`/products/${id}`, data);
+  api.put(`/products/${id}`, data);
 
 export const deleteProduct = (id) =>
-  axios.delete(`/products/${id}`);
+  api.delete(`/products/${id}`);

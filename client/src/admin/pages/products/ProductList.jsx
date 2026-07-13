@@ -2,35 +2,112 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import ProductToolbar from "../../components/products/ProductToolbar";
+import ProductTable from "../../components/products/ProductTable";
 
 const ProductList = () => {
   const navigate = useNavigate();
 
+  // Search State
   const [search, setSearch] = useState("");
 
+  // Category Filter
   const [category, setCategory] = useState("");
 
+  // Status Filter
   const [status, setStatus] = useState("");
 
-  const categories = [];
+  // Dummy Categories (Replace with API later)
+  const categories = [
+    {
+      _id: "1",
+      name: "Protein",
+    },
+    {
+      _id: "2",
+      name: "Mass Gainer",
+    },
+    {
+      _id: "3",
+      name: "Creatine",
+    },
+    {
+      _id: "4",
+      name: "Fat Burner",
+    },
+  ];
+
+  // Dummy Products (Replace with Backend API)
+  const products = [
+    {
+      _id: "1",
+      name: "Robinson Zero Whey",
+      category: {
+        _id: "1",
+        name: "Protein",
+      },
+      price: 5499,
+      stock: 15,
+      featured: true,
+      isActive: true,
+      images: [
+        {
+          url: "https://placehold.co/100x100",
+        },
+      ],
+    },
+    {
+      _id: "2",
+      name: "Fitsique Anabolic Mass",
+      category: {
+        _id: "2",
+        name: "Mass Gainer",
+      },
+      price: 3499,
+      stock: 28,
+      featured: false,
+      isActive: true,
+      images: [
+        {
+          url: "https://placehold.co/100x100",
+        },
+      ],
+    },
+    {
+      _id: "3",
+      name: "L-Carnitine",
+      category: {
+        _id: "4",
+        name: "Fat Burner",
+      },
+      price: 1299,
+      stock: 50,
+      featured: true,
+      isActive: false,
+      images: [
+        {
+          url: "https://placehold.co/100x100",
+        },
+      ],
+    },
+  ];
 
   return (
-    <div>
-      <div className="flex justify-between items-center mb-8">
+    <div className="space-y-6">
+      {/* Page Header */}
 
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
         <div>
-
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl font-bold text-slate-800">
             Products
           </h1>
 
-          <p className="text-gray-500 mt-2">
-            Manage all your products
+          <p className="text-slate-500 mt-1">
+            Manage all your gym supplements and nutrition products.
           </p>
-
         </div>
-
       </div>
+
+      {/* Toolbar */}
 
       <ProductToolbar
         search={search}
@@ -40,17 +117,13 @@ const ProductList = () => {
         status={status}
         setStatus={setStatus}
         categories={categories}
-        onRefresh={() => {}}
+        onRefresh={() => console.log("Refresh Products")}
         onAdd={() => navigate("/products/add")}
       />
 
-      {/* Product Table will come here */}
+      {/* Product Table */}
 
-      <div className="bg-white rounded-2xl shadow p-10 text-center">
-
-        Product Table Coming Soon
-
-      </div>
+      <ProductTable products={products} />
     </div>
   );
 };

@@ -21,10 +21,10 @@ import InquiryList from "../admin/pages/inquiry/InquiryList";
 
 import NewsletterList from "../admin/pages/newsletter/NewsletterList";
 
+
 const AdminRoutes = () => {
   return (
     <Routes>
-
       {/* Login */}
 
       <Route path="/login" element={<Login />} />
@@ -32,7 +32,6 @@ const AdminRoutes = () => {
       {/* Admin Layout */}
 
       <Route path="/" element={<AdminLayout />}>
-
         <Route index element={<Dashboard />} />
 
         <Route path="products" element={<ProductList />} />
@@ -47,25 +46,16 @@ const AdminRoutes = () => {
 
         <Route path="offers" element={<OfferList />} />
 
-        <Route
-          path="testimonials"
-          element={<TestimonialList />}
-        />
+        <Route path="testimonials" element={<TestimonialList />} />
 
-        <Route
-          path="inquiries"
-          element={<InquiryList />}
-        />
+        <Route path="inquiries" element={<InquiryList />} />
 
-        <Route
-          path="newsletter"
-          element={<NewsletterList />}
-        />
+        <Route path="newsletter" element={<NewsletterList />} />
 
+        <Route path="products/add" element={<AddProduct />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />
-
     </Routes>
   );
 };
