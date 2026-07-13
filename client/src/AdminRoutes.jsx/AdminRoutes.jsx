@@ -20,7 +20,7 @@ import BannerList from "../admin/pages/banner/BannerList";
 import AddBanner from "../pages/banners/AddBanner";
 import EditBanner from "../pages/banners/EditBanner";
 
-import OfferList from "../admin/pages/offer/OfferList";
+import OfferList from "../admin/pages/offers/OfferList";
 
 import TestimonialList from "../admin/pages/testimonial/TestimonialList";
 
