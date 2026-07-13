@@ -17,6 +17,9 @@ import EditCategory from "../pages/categories/EditCategory";
 
 import BannerList from "../admin/pages/banner/BannerList";
 
+import AddBanner from "../pages/banners/AddBanner";
+import EditBanner from "../pages/banners/EditBanner";
+
 import OfferList from "../admin/pages/offer/OfferList";
 
 import TestimonialList from "../admin/pages/testimonial/TestimonialList";
@@ -50,6 +53,16 @@ const AdminRoutes = () => {
         <Route path="categories/edit/:id" element={<EditCategory />} />
 
         <Route path="banners" element={<BannerList />} />
+
+        <Route
+  path="banners/add"
+  element={<AddBanner />}
+/>
+
+<Route
+  path="banners/edit/:id"
+  element={<EditBanner />}
+/>
 
         <Route path="offers" element={<OfferList />} />
 
