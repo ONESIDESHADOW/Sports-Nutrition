@@ -11,6 +11,10 @@ import EditProduct from "../admin/pages/products/EditProduct";
 
 import CategoryList from "../admin/pages/category/CategoryList";
 
+import AddCategory from "../pages/categories/AddCategory";
+
+import EditCategory from "../pages/categories/EditCategory";
+
 import BannerList from "../admin/pages/banner/BannerList";
 
 import OfferList from "../admin/pages/offer/OfferList";
@@ -20,8 +24,6 @@ import TestimonialList from "../admin/pages/testimonial/TestimonialList";
 import InquiryList from "../admin/pages/inquiry/InquiryList";
 
 import NewsletterList from "../admin/pages/newsletter/NewsletterList";
-
-import AddCategory from "../pages/categories/AddCategory";
 
 const AdminRoutes = () => {
   return (
@@ -44,6 +46,8 @@ const AdminRoutes = () => {
         <Route path="categories" element={<CategoryList />} />
 
         <Route path="categories/add" element={<AddCategory />} />
+
+        <Route path="categories/edit/:id" element={<EditCategory />} />
 
         <Route path="banners" element={<BannerList />} />
 

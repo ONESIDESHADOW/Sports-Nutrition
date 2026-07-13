@@ -55,9 +55,7 @@ const CategoryTable = ({
                 onEdit={(id) =>
                   navigate(`/categories/edit/${id}`)
                 }
-                onDelete={(category) =>
-                  console.log(category)
-                }
+onDelete={handleDelete}
               />
 
             ))
