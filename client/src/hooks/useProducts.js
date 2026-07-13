@@ -1,15 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
-
 import { getProducts } from "../services/product.service";
 
-export const useProducts = ()=>{
+const useProducts = () => {
+  return useQuery({
+    queryKey: ["products"],
+    queryFn: async () => {
+      const res = await getProducts();
+      return res.data;
+    },
+    staleTime: 1000 * 60 * 5,
+  });
+};
 
-    return useQuery({
-
-        queryKey:["products"],
-
-        queryFn:getProducts
-
-    });
-
-}
+export default useProducts;

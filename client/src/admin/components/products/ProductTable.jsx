@@ -20,14 +20,11 @@ const ProductTable = ({
     setOpenDelete(true);
   };
 
-  const confirmDelete = () => {
-    console.log(
-      "Delete",
-      selectedProduct
-    );
+const confirmDelete = () => {
+  console.log("Delete:", selectedProduct);
 
-    setOpenDelete(false);
-  };
+  setOpenDelete(false);
+};
 
   return (
     <>
