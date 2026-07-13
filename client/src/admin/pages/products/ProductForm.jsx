@@ -26,25 +26,45 @@ const ProductForm = ({ initialData = {}, onSubmit }) => {
     },
   });
 
-  const [previewImages, setPreviewImages] = useState(
-    initialData.images || []
-  );
+const [previewImages, setPreviewImages] = useState([]);
+const [selectedFiles, setSelectedFiles] = useState([]);
 
-  const handleImageChange = (e) => {
-    const files = Array.from(e.target.files);
+const handleImageChange = (e) => {
+  const files = Array.from(e.target.files);
 
-    const previews = files.map((file) => ({
-      file,
-      url: URL.createObjectURL(file),
-    }));
+  setSelectedFiles(files);
 
-    setPreviewImages(previews);
-  };
+  const previews = files.map((file) => ({
+    file,
+    url: URL.createObjectURL(file),
+  }));
 
-  const submitHandler = (data) => {
-    data.images = previewImages;
-    onSubmit(data);
-  };
+  setPreviewImages(previews);
+};
+
+const submitHandler = (data) => {
+  const formData = new FormData();
+
+  formData.append("name", data.name);
+  formData.append("category", data.category);
+  formData.append("brand", data.brand);
+  formData.append("flavour", data.flavour);
+  formData.append("price", data.price);
+  formData.append("mrp", data.mrp);
+  formData.append("stock", data.stock);
+  formData.append("description", data.description);
+
+  formData.append("featured", data.featured);
+  formData.append("bestSeller", data.bestSeller);
+  formData.append("newArrival", data.newArrival);
+  formData.append("isActive", data.isActive);
+
+  selectedFiles.forEach((file) => {
+    formData.append("images", file);
+  });
+
+  onSubmit(formData);
+};
 
   return (
     <form

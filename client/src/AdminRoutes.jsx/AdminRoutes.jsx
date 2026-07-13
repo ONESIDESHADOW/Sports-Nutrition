@@ -52,7 +52,7 @@ const AdminRoutes = () => {
 
         <Route path="newsletter" element={<NewsletterList />} />
 
-        <Route path="products/add" element={<AddProduct />} />
+        
       </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />
